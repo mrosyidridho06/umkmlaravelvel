@@ -11,7 +11,7 @@
 <body>
     <td>
         <h1 text-align: center;>Silahkan Melakukan Registrasi</h1>
-        <form action="{{route('pawb_store')}}"method="POST">
+        <form action="/tumkm/update/{{route('tumkm_edit')}}"method="POST" enctype="multipart/from-data">
     </td>
     @csrf
     @csrf

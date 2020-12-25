@@ -18,6 +18,12 @@ class TumkmController extends Controller
         return view('indexpawb', ['tumkms' => $tumkms]);
     }
 
+
+    public function beranda()
+    {
+        $tumkms = tumkm::all();
+        return view('indexpawb', ['tumkms' => $tumkms]);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -45,8 +51,8 @@ class TumkmController extends Controller
 
         tumkm::create($validatedDATAtumkm);
         
-        return redirect()->route('indexpawb');
-    }
+        return redirect()->route('input_tumkm');
+    } 
 
     /**
      * Display the specified resource.
@@ -65,9 +71,10 @@ class TumkmController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($tumkm)
     {
-        //
+       // tumkm::where('id', $tumkm)->edit();
+        //return redirect()->route('indexpawb');
     }
 
     /**
