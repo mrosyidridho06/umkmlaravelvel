@@ -22,6 +22,11 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 </head>
 
+<figure class="figure">
+  <img src="BANTUAN.jpg" class="figure-img img-fluid rounded" alt="ini bantuan">
+  <figcaption class="figure-caption">A caption for the above image.</figcaption>
+</figure>
+
 <body>
 <br>
 </body>

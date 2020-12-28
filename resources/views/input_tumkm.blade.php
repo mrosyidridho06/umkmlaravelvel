@@ -10,7 +10,7 @@
 </head>
 <body>
     <td>
-        <h1 text-align: center;>Silahkan Melakukan Registrasi</h1>
+    <h1><p class="text-center">Silahkan Masukan Data UMKM anda Untuk diPromosikan</p></h1>
         <form action="{{route('pawb_store')}}"method="POST">
     </td>
     @csrf
@@ -39,7 +39,7 @@
         <tr>
             <td>
                 <input button class="btn btn-primary" type="submit" value="Submit"></button>
-                <input type="submit" value="Reset">
+                <input button class="btn btn-secondary" type="reset" value="reset"></button>
             </td>
         </tr>
     </table> 

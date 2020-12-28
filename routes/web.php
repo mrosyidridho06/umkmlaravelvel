@@ -41,7 +41,9 @@ Route::get('/tumkm', [TumkmController::class,'index'])->name('indexpawb');
 Route::get('/tumkm_input', [TumkmController::class,'create'])->name('input_tumkm');
 Route::post('/tumkm_store', [TumkmController::class,'store'])->name('pawb_store');
 Route::get('/tumkm_delete/{id}', [TumkmController::class,'destroy'])->name('delete_tumkm');
-Route::get('/tumkm_edit/{id}',[TumkmController::class, 'edit'])->name('tumkm_edit');
+Route::get('/editum/{id}',[TumkmController::class, 'edit'])->name('tumkm_edit');
+Route::post('/tumkm_update/{id}',[TumkmController::class, 'update'])->name('tumkm_update');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

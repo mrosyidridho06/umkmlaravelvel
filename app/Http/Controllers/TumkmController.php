@@ -51,7 +51,7 @@ class TumkmController extends Controller
 
         tumkm::create($validatedDATAtumkm);
         
-        return redirect()->route('input_tumkm');
+        return redirect()->route('indexpawb');
     } 
 
     /**
@@ -71,12 +71,15 @@ class TumkmController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($tumkm)
+    public function edit($id)
     {
        // tumkm::where('id', $tumkm)->edit();
         //return redirect()->route('indexpawb');
+        $tuma=tumkm::findorfail($id);
+        return view('editum', compact('tuma'));
     }
 
+    
     /**
      * Update the specified resource in storage.
      *
@@ -86,7 +89,17 @@ class TumkmController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $request->validate([
+        //     'jenis' => 'required',
+        //     'nama' => 'required',
+        //     'alamat' => 'required',
+        //     'kontak' => 'required',
+        //     ]);
+        //     $tumkms->update($request->all());
+        //     $tumkms -> id -> $request->id;
+            $tuma=tumkm::findorfail($id);
+            $tuma->update($request->all());
+            return redirect()->route('indexpawb');
     }
 
     /**
@@ -101,3 +114,4 @@ class TumkmController extends Controller
         return redirect()->route('indexpawb');
     }
 }
+
