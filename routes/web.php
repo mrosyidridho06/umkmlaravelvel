@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\TumkmController;
 use Illuminate\Support\Facades\Route;
+use app\http\Livewire\Posts;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,7 @@ Route::get('/login', function() // Mendaftarkan URL register
    return View::make('login');
 });
 
+
 Route::get('/tumkm', [TumkmController::class,'index'])->name('indexpawb');
 Route::get('/tumkm_input', [TumkmController::class,'create'])->name('input_tumkm');
 Route::post('/tumkm_store', [TumkmController::class,'store'])->name('pawb_store');
@@ -47,3 +49,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

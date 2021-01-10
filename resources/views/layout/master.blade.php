@@ -6,26 +6,20 @@
     <title>@yield('title')</title>
 </head>
 <body>
+
   <div class="jumbotron text-center">
-  <h1>Selamat Datang Di Si-UMKM</h1>
-  <p>Anda dapat mencari UMKM ataupun Promosi UMKM anda!</p>
-  <nav class="navbar navbar-expand-sm bg-light justify-content-center">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/register">Beranda</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tumkm">Index</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tumkm_input">Daftar</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/login">Login</a>
-    </li>
-  </ul>
-</nav>
-</div>
+  <h1 class="display-3">Selamat Datang Di Si-UMKM</h1>
+  <p class="lead">Anda dapat mencari UMKM ataupun Promosi UMKM anda!</p>
+  <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+    <li class="breadcrumb-item"><a href="/tumkm">Index</a></li>
+    <li class="breadcrumb-item"><a href="/tumkm_input">Daftar</a></li>
+    <li class="breadcrumb-item"><a href="/login">Login</a></li>
+    <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+  </ol>
+  </nav>
+  </div>
 @yield('content')
 </body>
 </html>
