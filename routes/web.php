@@ -50,6 +50,17 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+Route::group(['middleware' => [
+    'auth:sanctum', 
+    'verified',
+]], function () {
+    
+    Route::get('/dashboard', function() {
     return view('dashboard');
-})->name('dashboard');
+    })->name('dashboard');
+
+    Route::get('/pagetum', function() {
+    return view('pagetum');
+    })->name('pagetumk');
+
+});
